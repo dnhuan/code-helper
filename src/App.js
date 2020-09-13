@@ -64,7 +64,7 @@ function App() {
       ></TextArea>
       <Controller>
         <ControllerChild>
-          <span>Prefix: </span>
+          <span>Prefix:</span>
           <input
             name="prefix"
             value={text.prefix}
@@ -72,7 +72,7 @@ function App() {
           ></input>
         </ControllerChild>
         <ControllerChild>
-          <span>Suffix: </span>
+          <span>Suffix:</span>
           <input
             name="suffix"
             value={text.suffix}
@@ -80,7 +80,7 @@ function App() {
           ></input>
         </ControllerChild>
         <ControllerChild>
-          <span>Line gap: </span>
+          <span>Line gap:</span>
           <input
             name="lineGap"
             type="number"
@@ -105,14 +105,19 @@ const Controller = styled.div`
   margin-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-evenly;
 `;
 
 const ControllerChild = styled.div`
-  width: 100%;
   display: flex;
+  flex: 1;
+  flex-direction: row nowrap;
   justify-content: space-between;
-  :not(:first-child) {
-    margin-top: 10px;
+  align-items: center;
+
+  margin: 5px 20px 0px 20px;
+  input {
+    height: 1rem;
   }
 `;
 
